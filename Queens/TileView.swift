@@ -37,8 +37,12 @@ struct TileView: View {
                 
             } label: {
                 ZStack {
-                    if tile.queen {
+                    if tile.queen_original {
                         Text("👑")
+                            .font(.system(size: 32.0))
+                        
+                    } else if tile.queen_discovered {
+                        Text("👸")
                             .font(.system(size: 32.0))
                         
                     }

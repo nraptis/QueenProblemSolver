@@ -17,7 +17,6 @@ struct GridView: View {
     var body: some View {
         ZStack {
             HStack(spacing: 2.0) {
-                
                 ForEach(viewModel.grid, id: \.self) { column in
                     VStack(spacing: 2.0) {
                         ForEach(column) { tile in

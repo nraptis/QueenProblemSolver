@@ -10,4 +10,5 @@ import Foundation
 enum PaintMode {
     case colors
     case queens
+    case test
 }

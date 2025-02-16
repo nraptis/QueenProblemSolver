@@ -14,7 +14,16 @@ import Foundation
     
     var id: Int
     var color = ColorModel.color00
-    var queen = false
+    
+    var queen_original = false
+    var queen_discovered = false
+    
+    var impossible = false
+    
+    var groupModel: GroupModel!
+    
+    @ObservationIgnored var flag = false
+    
     
     init(id: Int) {
         self.id = id

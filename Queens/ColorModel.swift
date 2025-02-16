@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum ColorModel: UInt8 {
+enum ColorModel: UInt8, CaseIterable {
     case color00
     case color01
     case color02
@@ -20,6 +20,37 @@ enum ColorModel: UInt8 {
     case color09
     case color10
     case color11
+}
+
+extension ColorModel: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .color00:
+            return "red"
+        case .color01:
+            return "green"
+        case .color02:
+            return "blue"
+        case .color03:
+            return "orange"
+        case .color04:
+            return "teal"
+        case .color05:
+            return "pink"
+        case .color06:
+            return "lime"
+        case .color07:
+            return "hunter"
+        case .color08:
+            return "yellow"
+        case .color09:
+            return "purple"
+        case .color10:
+            return "brown"
+        case .color11:
+            return "gray"
+        }
+    }
 }
 
 extension ColorModel: Codable {

@@ -68,6 +68,10 @@ struct ContentView: View {
                     Picker("", selection: $viewModel.paintMode) {
                         Text("Colors").tag(PaintMode.colors)
                         Text("Queens").tag(PaintMode.queens)
+                        Text("Test").tag(PaintMode.test)
+                        
+                        
+                        
                                 }
                                 .pickerStyle(.segmented)
                 }
@@ -138,7 +142,7 @@ struct ContentView: View {
                     
                     Button {
                         
-                        viewModel.load()
+                        _ = viewModel.load()
                     } label: {
                         ZStack {
                             Text("Load")

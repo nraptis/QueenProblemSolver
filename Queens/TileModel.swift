@@ -24,11 +24,9 @@ import Foundation
     
     @ObservationIgnored var flag = false
     
-    
     init(id: Int) {
         self.id = id
     }
-    
 }
 
 extension TileModel: Identifiable {

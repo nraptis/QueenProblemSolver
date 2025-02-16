@@ -65,15 +65,15 @@ struct ContentView: View {
             
             VStack {
                 HStack {
-                    Picker("", selection: $viewModel.paintMode) {
-                        Text("Colors").tag(PaintMode.colors)
-                        Text("Queens").tag(PaintMode.queens)
-                        Text("Test").tag(PaintMode.test)
+                    Picker("", selection: $viewModel.paintModel) {
+                        Text("Colors").tag(PaintModel.colors)
+                        Text("Queens").tag(PaintModel.queens)
+                        Text("Test").tag(PaintModel.test)
                         
                         
                         
-                                }
-                                .pickerStyle(.segmented)
+                    }
+                    .pickerStyle(.segmented)
                 }
             }
             .frame(height: 44.0)
@@ -96,13 +96,12 @@ struct ContentView: View {
                         Text("CLR_11").tag(ColorModel.color11)
                     }
                     .pickerStyle(.segmented)
-                        
+                    
                 }
             }
             .frame(height: 44.0)
             
             HStack(spacing: 0.0) {
-                
                 VStack {
                     
                 }
@@ -115,9 +114,7 @@ struct ContentView: View {
                 .background(Color.pink)
                 
                 VStack {
-                    
                     Button {
-                        
                         viewModel.solve()
                     } label: {
                         ZStack {
@@ -151,14 +148,9 @@ struct ContentView: View {
                         .frame(width: 144.0, height: 44.0)
                         .background(RoundedRectangle(cornerRadius: 16.0).foregroundStyle(Color.blue))
                     }
-                    
                 }
                 .frame(width: 256.0)
-                
             }
-            
-            
-            
         }
         .frame(width: 1200, height: 800)
     }

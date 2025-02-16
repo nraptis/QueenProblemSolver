@@ -9,7 +9,7 @@ import SwiftUI
 
 @Observable class ViewModel {
     
-    var paintMode = PaintMode.colors
+    var paintModel = PaintModel.test
     var paintColor = ColorModel.color04
     
     var groupModels = [GroupModel]()
@@ -31,7 +31,7 @@ import SwiftUI
     func click(gridX: Int, gridY: Int) {
         if gridX >= 0 && gridX < width {
             if gridY >= 0 && gridY < height {
-                switch paintMode {
+                switch paintModel {
                 case .colors:
                     grid[gridX][gridY].color = paintColor
                     print("Updated \(gridX), \(gridY) to \(paintColor)")
@@ -417,11 +417,6 @@ import SwiftUI
         }
         return nil
     }
-    
-    func group(for tileModel: TileModel) {
-        
-    }
-    
 }
 
 extension ViewModel {

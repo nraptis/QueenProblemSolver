@@ -10,9 +10,6 @@ import SwiftUI
 struct NoBackgroundButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .background(Color.clear) // Ensure the background is clear
-            .scaleEffect(configuration.isPressed ? 0.95 : 1.0) // Optional: Add a scaling effect when pressed
-            .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
     }
 }
 
@@ -53,7 +50,6 @@ struct TileView: View {
 
         }
         .frame(width: 56.0, height: 56.0)
-        //.background(Color.clear) // ✅ Explicitly remove background
         .buttonStyle(NoBackgroundButtonStyle()) // Apply the custom button style
         
     }

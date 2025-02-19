@@ -148,6 +148,19 @@ struct ContentView: View {
                         .frame(width: 144.0, height: 44.0)
                         .background(RoundedRectangle(cornerRadius: 16.0).foregroundStyle(Color.blue))
                     }
+                    
+                    Button {
+                        
+                        viewModel.clear()
+                    } label: {
+                        ZStack {
+                            Text("Clear")
+                                .foregroundStyle(Color.white)
+                        }
+                        .frame(width: 144.0, height: 44.0)
+                        .background(RoundedRectangle(cornerRadius: 16.0).foregroundStyle(Color.blue))
+                    }
+                    
                 }
                 .frame(width: 256.0)
             }

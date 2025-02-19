@@ -118,7 +118,7 @@ import SwiftUI
         print("height_decrease")
         size(width: width, height: height - 1)
     }
-
+    
     var numberOfLoops = 0
     @MainActor func solve() {
         print("solve!")
@@ -222,7 +222,7 @@ import SwiftUI
             }
             
         }
-
+        
         return false
     }
     
@@ -417,6 +417,19 @@ import SwiftUI
         }
         return nil
     }
+    
+    func clear() {
+        for x in 0..<width {
+            for y in 0..<height {
+                grid[x][y].flag = false
+                grid[x][y].queen_original = false
+                grid[x][y].queen_discovered = false
+                grid[x][y].color = .color00
+                
+            }
+        }
+    }
+    
 }
 
 extension ViewModel {

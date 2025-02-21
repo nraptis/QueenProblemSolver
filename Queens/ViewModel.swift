@@ -9,15 +9,15 @@ import SwiftUI
 
 @Observable class ViewModel {
     
-    var paintModel = PaintModel.test
+    var paintModel = PaintModel.queens
     var paintColor = ColorModel.color04
     
     var groupModels = [GroupModel]()
     
     init() {
         if !load() {
-            size(width: 6,
-                 height: 6)
+            size(width: 9,
+                 height: 9)
         }
     }
     
@@ -322,7 +322,6 @@ import SwiftUI
         
         return false
     }
-    
     
     func existsAnotherFlaggedOrQueen_V(_ gridX: Int, _ gridY: Int) -> Bool {
         var y = 0
